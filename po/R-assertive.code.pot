@@ -1,0 +1,66 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: assertive.code 0.0-1\n"
+"Report-Msgid-Bugs-To: https://bitbucket.org/richierocks/assertive.code/issues\n"
+"POT-Creation-Date: 2015-08-31 21:40\n"
+"PO-Revision-Date: 2015-09-02 12:49+0300\n"
+"Last-Translator: Richard Cotton <richierocks@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+
+msgid "The function %s does not have the argument %s."
+msgstr ""
+
+msgid "%s does not have a locked binding."
+msgstr ""
+
+msgid "%s is not a function being debugged."
+msgstr ""
+
+msgid "%s do not all exist."
+msgstr ""
+
+msgid "%s all do not exist."
+msgstr ""
+
+msgid "%s is not loaded."
+msgstr ""
+
+msgid "%s is not valid R code."
+msgstr ""
+
+msgid "%s are not all valid variable names."
+msgstr ""
+
+msgid "%s are all invalid variable names."
+msgstr ""
+
+msgid "%s is not an argument of %s."
+msgstr ""
+
+msgid "%s does not exist in %s."
+msgstr ""
+
+msgid "%s is not locked (read-only) in %s."
+msgstr ""
+
+msgid "%s is not being debugged."
+msgstr ""
+
+msgid "%s does not exist."
+msgstr ""
+
+msgid "The DLL %s is not loaded."
+msgstr ""
+
+msgid "The routine %s is not registered with the DLL %s."
+msgstr ""
+
+msgid "The symbol %s is not loaded."
+msgstr ""
+
+msgid "%s is not valid R code. %s."
+msgstr ""
