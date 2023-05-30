@@ -5,8 +5,7 @@
 \alias{is_valid_r_code}
 \title{Is the input valid R code?}
 \usage{
-assert_is_valid_r_code(x, severity = getOption("assertive.severity",
-  "stop"))
+assert_is_valid_r_code(x, severity = getOption("assertive.severity", "stop"))
 
 is_valid_r_code(x, .xname = get_name_in_parent(x))
 }

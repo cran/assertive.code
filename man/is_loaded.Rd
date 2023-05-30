@@ -7,8 +7,12 @@
 \usage{
 assert_is_loaded(x, severity = getOption("assertive.severity", "stop"))
 
-is_loaded(x, PACKAGE = "", type = c("", "C", "Fortran", "Call",
-  "External"), .xname = get_name_in_parent(x))
+is_loaded(
+  x,
+  PACKAGE = "",
+  type = c("", "C", "Fortran", "Call", "External"),
+  .xname = get_name_in_parent(x)
+)
 }
 \arguments{
 \item{x}{A string naming the symbol in a DLL to check.}
@@ -27,10 +31,14 @@ search to, or \code{""} to check all type. Passed to \code{is.loaded}.}
 \value{
 \code{is_loaded} wraps \code{\link[base]{is.loaded}}, providing more 
 information on failure.  \code{assert_is_loaded} returns nothing but
-throws an error if \code{is_loaded} returns \code{FALSE}.
+throws an error if \code{is_loaded} returns \code{FALSE}
 }
 \description{
 Checks to see if the input DLL (a.k.a. shared object) is loaded.
+}
+\note{
+From R 4.4.0, DLL for base packages are not searchable, so 
+\code{is.loaded} returns FALSE, so \code{is_loaded} also returns FALSE.
 }
 \seealso{
 \code{\link[base]{is.loaded}}.

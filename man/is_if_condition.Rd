@@ -5,8 +5,7 @@
 \alias{is_if_condition}
 \title{Is suitable to be used as an if condition}
 \usage{
-assert_is_if_condition(x, severity = getOption("assertive.severity",
-  "stop"))
+assert_is_if_condition(x, severity = getOption("assertive.severity", "stop"))
 
 is_if_condition(x, .xname = get_name_in_parent(x))
 }

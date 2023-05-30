@@ -5,11 +5,13 @@
 \alias{is_binding_locked}
 \title{Is the binding of a variable locked?}
 \usage{
-assert_is_binding_locked(x, severity = getOption("assertive.severity",
-  "stop"))
+assert_is_binding_locked(x, severity = getOption("assertive.severity", "stop"))
 
-is_binding_locked(x, env = if (is_scalar(e <- find(.xname)))
-  as.environment(e) else parent.frame(), .xname = get_name_in_parent(x))
+is_binding_locked(
+  x,
+  env = if (is_scalar(e <- find(.xname))) as.environment(e) else parent.frame(),
+  .xname = get_name_in_parent(x)
+)
 }
 \arguments{
 \item{x}{Input to check. (Unlike \code{bindingIsLocked}, you can pass the

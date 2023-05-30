@@ -6,8 +6,11 @@
 \alias{has_arg_}
 \title{Does the current call have an argument?}
 \usage{
-assert_has_arg(x, fn = sys.function(sys.parent()),
-  severity = getOption("assertive.severity", "stop"))
+assert_has_arg(
+  x,
+  fn = sys.function(sys.parent()),
+  severity = getOption("assertive.severity", "stop")
+)
 
 has_arg(x, fn = sys.function(sys.parent()))
 

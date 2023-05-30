@@ -6,13 +6,21 @@
 \alias{is_valid_variable_name}
 \title{Is the string a valid variable name?}
 \usage{
-assert_all_are_valid_variable_names(x, allow_reserved = TRUE,
-  allow_duplicates, na_ignore = FALSE,
-  severity = getOption("assertive.severity", "stop"))
+assert_all_are_valid_variable_names(
+  x,
+  allow_reserved = TRUE,
+  allow_duplicates,
+  na_ignore = FALSE,
+  severity = getOption("assertive.severity", "stop")
+)
 
-assert_any_are_valid_variable_names(x, allow_reserved = TRUE,
-  allow_duplicates, na_ignore = FALSE,
-  severity = getOption("assertive.severity", "stop"))
+assert_any_are_valid_variable_names(
+  x,
+  allow_reserved = TRUE,
+  allow_duplicates,
+  na_ignore = FALSE,
+  severity = getOption("assertive.severity", "stop")
+)
 
 is_valid_variable_name(x, allow_reserved = TRUE, allow_duplicates)
 }
@@ -52,9 +60,6 @@ unname(is_valid_variable_name(x, allow_reserved = FALSE))
 assertive.base::dont_stop(
   assert_all_are_valid_variable_names(c("...", "..1"), allow_reserved = FALSE)
 )
-}
-\references{
-\url{http://4dpiecharts.com/2011/07/04/testing-for-valid-variable-names/}
 }
 \seealso{
 \code{\link{make.names}}.

@@ -282,7 +282,9 @@ is_if_condition <- function(x, .xname = get_name_in_parent(x))
 #' Either \code{"stop"}, \code{"warning"}, \code{"message"}, or \code{"none"}.
 #' @return \code{is_loaded} wraps \code{\link[base]{is.loaded}}, providing more 
 #' information on failure.  \code{assert_is_loaded} returns nothing but
-#' throws an error if \code{is_loaded} returns \code{FALSE}.
+#' throws an error if \code{is_loaded} returns \code{FALSE}
+#' @note From R 4.4.0, DLL for base packages are not searchable, so 
+#' \code{is.loaded} returns FALSE, so \code{is_loaded} also returns FALSE.
 #' @seealso \code{\link[base]{is.loaded}}.
 #' @export
 is_loaded <- function(x, PACKAGE = "", type = c("", "C", "Fortran", "Call", "External"), 
@@ -384,8 +386,6 @@ is_valid_r_code <- function(x, .xname = get_name_in_parent(x))
 #' assertive.base::dont_stop(
 #'   assert_all_are_valid_variable_names(c("...", "..1"), allow_reserved = FALSE)
 #' )
-#' @references
-#' \url{http://4dpiecharts.com/2011/07/04/testing-for-valid-variable-names/}
 #' @importFrom assertive.base set_cause
 #' @export
 is_valid_variable_name <- function(x, allow_reserved = TRUE, 

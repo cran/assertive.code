@@ -6,14 +6,26 @@
 \alias{is_existing}
 \title{Does the variable exist?}
 \usage{
-assert_all_are_existing(x, envir = parent.frame(), inherits = TRUE,
-  severity = getOption("assertive.severity", "stop"))
+assert_all_are_existing(
+  x,
+  envir = parent.frame(),
+  inherits = TRUE,
+  severity = getOption("assertive.severity", "stop")
+)
 
-assert_any_are_existing(x, envir = parent.frame(), inherits = TRUE,
-  severity = getOption("assertive.severity", "stop"))
+assert_any_are_existing(
+  x,
+  envir = parent.frame(),
+  inherits = TRUE,
+  severity = getOption("assertive.severity", "stop")
+)
 
-is_existing(x, envir = parent.frame(), inherits = TRUE,
-  .xname = get_name_in_parent(x))
+is_existing(
+  x,
+  envir = parent.frame(),
+  inherits = TRUE,
+  .xname = get_name_in_parent(x)
+)
 }
 \arguments{
 \item{x}{Input to check.}

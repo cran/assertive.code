@@ -104,15 +104,28 @@ test_that(
 )
 
 test_that(
-  "test is_loaded with a symbol name returns true when the symbol is part of a loaded DLL", 
+  "test is_loaded with a base symbol name returns false when the symbol is part of a loaded DLL",
   {
-    # Should be true
-    expected <- !is.null(getLoadedDLLs()$base) && 
-      !is.null(getDLLRegisteredRoutines("base")$.Call$R_addTaskCallback)
-    actual <- is_loaded("R_addTaskCallback", "base")
-    expect_equal(actual, expected)
+    actual <- is_loaded("R_addTaskCallback", "base", "Call")
+    expected <- is.loaded("R_addTaskCallback", "base", "Call")
+    # actual is sometimes TRUE, sometimes FALSE + attributes, 
+    # depending on version
+    expect_equal(assertive.base::strip_attributes(actual), expected)
   }
 )
+
+if(requireNamespace("rlang"))
+{
+  test_that(
+    "test is_loaded with a non-base symbol name returns true when the symbol is part of a loaded DLL", 
+    {
+      library(rlang)
+      actual <- is_loaded("ffi_is_character", "rlang", "Call")
+      expected <- is.loaded("ffi_is_character", "rlang", "Call")
+      expect_equal(actual, expected)
+    }
+  )
+}
 
 test_that(
   "test is_loaded with an unloaded DLL returns false", 
